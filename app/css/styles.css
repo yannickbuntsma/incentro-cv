@@ -102,19 +102,28 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif; }
 
+.font-highlight {
+  font-family: "Gloria Hallelujah", Helvetica, sans-serif;
+  font-size: 1.1em;
+  margin: 0 0.1em; }
+
 html {
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-size: 1.8rem;
   margin: 0 0 1rem 0;
   padding: 0; }
 
 h1 {
   font-family: "Gloria Hallelujah", Helvetica, sans-serif; }
 
+p {
+  margin-bottom: 0.75rem; }
+
 p, span {
   font-size: 0.875rem;
-  line-height: 1.4; }
+  line-height: 1.75; }
 
 body {
   background-color: #f3f3f3; }
@@ -122,7 +131,6 @@ body {
 /*----- NAVIGATION ------*/
 #side-nav {
   z-index: 99999;
-  background-color: #eeeeee;
   height: 100vh;
   float: left;
   position: fixed;
@@ -188,7 +196,7 @@ section {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 17px 20px -20px rgba(0, 0, 0, 0.4);
     margin-top: 2rem;
-    letter-spacing: 0.1em; }
+    letter-spacing: 0.05rem; }
     .container button:hover {
       transform: translateY(-3px);
       box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.4); }
@@ -237,6 +245,8 @@ section {
 #home .right {
   background: #fff;
   position: relative; }
+  #home .right p {
+    margin-right: 7.5rem; }
   #home .right:after {
     content: '';
     position: absolute;
@@ -248,6 +258,10 @@ section {
     background: rgba(0, 0, 0, 0.2);
     filter: blur(10px);
     opacity: 0.5; }
+
+#home button {
+  background-color: #d33a54;
+  background-image: linear-gradient(315deg, #d33a54 0%, #f82967 100%); }
 
 .left, .right {
   height: 100%; }
@@ -291,6 +305,10 @@ section {
     width: 400px;
     position: absolute;
     transform: translate(8rem, 2rem); }
+
+#projects button {
+  background-color: #00DBDE;
+  background: linear-gradient(315deg, #1d976c, #93f9b9); }
 
 #contact .top {
   background: linear-gradient(to bottom, #f7971e, #F58233);
@@ -372,17 +390,13 @@ section {
 /*----------------------*/
 /*--- MEDIA QUERIES ----*/
 /*----------------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   * {
     -webkit-tap-highlight-color: transparent; }
   body {
-    font-size: 1.35rem; }
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 1rem 0;
-    padding: 0; }
+    font-size: 1.5em; }
   p, span {
-    font-size: 1.35rem;
-    line-height: 1.4; }
+    font-size: 1.5rem; }
   /**/
   #side-nav {
     display: none;
@@ -390,6 +404,9 @@ section {
   section {
     transform: translate(0, 1px);
     margin-left: 0; }
+  button {
+    width: 100%;
+    height: 80px; }
   .col-10 {
     width: 90%;
     position: absolute;
@@ -402,7 +419,8 @@ section {
   .left {
     height: 30%; }
   .right {
-    height: 70%; }
+    height: 70%;
+    margin-right: 0; }
   .radius-left {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
