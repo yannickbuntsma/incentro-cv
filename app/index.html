@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css">
+  <!--endbuild-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700|Gloria+Hallelujah|Raleway"
+        rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+</head>
+
+<body>
+
+<div class="col-2" id="side-nav">
+  <div class="nav-inner">
+    <ul>
+      <li><a href="#first">About me</a></li>
+      <li><a href="#second">Skills</a></li>
+      <li><a href="#third">Contact</a></li>
+      <span id="nav-indicator"></span>
+    </ul>
+  </div>
+</div>
+
+
+<div class="col-10" id="fullpage">
+  <section id="home" class="row section" data-section-name="first" data-menuanchor="first">
+    <div class="container">
+      <div class="col-5 sidebar radius-left left">
+        <div class="avatar"></div>
+
+      </div>
+      <div class="col-7 radius-right right">
+        <div class="content">
+          <h1>Section One</h1>
+          <h4>Header 4</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.</p>
+          <button class="btn alert-button">Alert size</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="row section" data-section-name="second" data-menuanchor="second">
+    <div class="container">
+      <div class="col-7 sidebar radius-left left">
+        <img src="./images/MBP-code-thin.png" alt="">
+      </div>
+      <div class="col-5 radius-right right">
+        <div class="content">
+          <h1>Section Two</h1>
+          <h4>Header 4</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.</p>
+          <button class="btn">Button text</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="row section" data-section-name="third" data-menuanchor="third">
+    <div class="container">
+      <div class="icons">
+        <div class="icon"><a href="tel:+31-20-4090444"><i class="ion-android-call"></i></a></div>
+        <div class="icon"><a href="mailto:yannick.buntsma@incentro.com"><i class="ion-android-mail"></i></a></div>
+        <div class="icon"><a href="http://www.incentro.com" target="_blank"><i class="ion-android-globe"></i></a></div>
+        <div class="icon"><a
+            href="https://www.google.nl/maps/dir/''/incentro+amsterdam/@52.399162,4.8017536,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x416547fdc005f355:0x5ac0e4defafcfa0d!2m2!1d4.8717931!2d52.3991827"
+            target="_blank"><i class="ion-ios-location"></i></a></div>
+      </div>
+      <div class="col-12 sidebar radius-top radius-bottom top">
+        <p>welcome to the <span>#worldofincentro</span></p>
+      </div>
+      <div class="col-12 content radius-top radius-bottom bottom">
+        <!--         empty -->
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!--build:js js/main.min.js -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+</body>
+
+</html>
