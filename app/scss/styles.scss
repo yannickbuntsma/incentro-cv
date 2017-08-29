@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+h1 {
+  font-family: $gloria-font;
+}
+
 p, span {
   font-size: 0.875rem;
   line-height: 1.4;
@@ -159,10 +163,30 @@ section {
     border: 6px solid white;
     background: url('../images/Yannick-portret.png') no-repeat center center;
     background-size: cover;
+    display: none; /// TEMP
+  }
+  & .kite {
+    position: absolute;
+
+    & img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  & .left .kite {
+    display: none;
+  }
+  & .right .kite {
+    display: block;
+    right: -20%;
+    top: -10%;
   }
 
   & .left {
-    background: radial-gradient(ellipse at top, #243B55 0%, #141E30 100%);
+    //background: radial-gradient(ellipse at top, #243B55 0%, #141E30 100%);
+    background-image: url('../images/yannick.jpg');
+    background-size: cover;
+    background-position: 40% 0;
     position: relative;
     // box-shadow: 100px 100px 200px -140px red;
 
@@ -192,20 +216,18 @@ section {
       width: 100%;
       height: 100%;
       background-color: lightgrey;
-      background: rgba(0,0,0,0.2);
+      background: rgba(0, 0, 0, 0.2);
       filter: blur($shadow-blur);
       opacity: $shadow-opacity;
     }
   }
 }
 
-
-
 .left, .right {
   height: 100%;
 
   & .content {
-    padding: 2rem;
+    padding: 3rem;
   }
 }
 
@@ -330,13 +352,13 @@ section {
 }
 
 .icons {
-  font-size: 2rem;
   position: absolute;
   bottom: 0;
   padding: 2rem;
   width: 100%;
 
   & .icon {
+    font-size: 2rem;
     display: inline-block;
     width: 23%;
     text-align: center;
@@ -353,11 +375,37 @@ section {
   }
 }
 
+.ion-ios-circle-outline {
+  @include HA;
+  bottom: 20px;
+
+  color: white;
+  font-size: 5rem;
+}
+
 /*----------------------*/
 /*--- MEDIA QUERIES ----*/
 /*----------------------*/
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  body {
+    font-size: 1.35rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  p, span {
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+  /**/
   #side-nav {
     display: none;
     height: 102vh;
@@ -371,8 +419,9 @@ section {
   .col-10 {
     width: 90%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    margin: 0 auto;
+    float: none;
   }
 
   .left, .right {
@@ -407,6 +456,17 @@ section {
       @include AA;
       transform: translate(-50%, -50%) scale(1.5);
     }
+    & .left {
+      background-position: 0 0;
+    }
+    & .left .kite {
+      display: block;
+      right: -10%;
+      top: -30%;
+    }
+    & .right .kite {
+      display: none;
+    }
   }
 
   #projects {
@@ -414,20 +474,6 @@ section {
       & img {
         @include AA;
         transform: translate(-50%, -50%) scale(1.5);
-      }
-    }
-  }
-}
-
-
-//////// NAV EXTRA //////////
-
-body .fp-viewing-second {
-  & #side-nav {
-    background-color: red !important;
-    & ul {
-      & span {
-        top: 33%;
       }
     }
   }

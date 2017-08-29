@@ -11,6 +11,8 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 
+var babel = require('gulp-babel');
+
 
 // Development Tasks 
 // -----------------
@@ -49,8 +51,8 @@ gulp.task('useref', function() {
 
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('**/*.js', babel()))
+    .pipe(gulpIf('**/*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
 

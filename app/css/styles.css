@@ -109,6 +109,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
   padding: 0; }
 
+h1 {
+  font-family: "Gloria Hallelujah", Helvetica, sans-serif; }
+
 p, span {
   font-size: 0.875rem;
   line-height: 1.4; }
@@ -197,10 +200,27 @@ section {
   border-radius: 1000px;
   border: 6px solid white;
   background: url("../images/Yannick-portret.png") no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  display: none; }
+
+#home .kite {
+  position: absolute; }
+  #home .kite img {
+    width: 300px;
+    height: 300px; }
+
+#home .left .kite {
+  display: none; }
+
+#home .right .kite {
+  display: block;
+  right: -20%;
+  top: -10%; }
 
 #home .left {
-  background: radial-gradient(ellipse at top, #243B55 0%, #141E30 100%);
+  background-image: url("../images/yannick.jpg");
+  background-size: cover;
+  background-position: 40% 0;
   position: relative; }
   #home .left:after {
     content: '';
@@ -232,7 +252,7 @@ section {
 .left, .right {
   height: 100%; }
   .left .content, .right .content {
-    padding: 2rem; }
+    padding: 3rem; }
 
 #projects .left {
   background: radial-gradient(circle at top, #93f9b9, #1d976c);
@@ -325,12 +345,12 @@ section {
     opacity: 1; }
 
 .icons {
-  font-size: 2rem;
   position: absolute;
   bottom: 0;
   padding: 2rem;
   width: 100%; }
   .icons .icon {
+    font-size: 2rem;
     display: inline-block;
     width: 23%;
     text-align: center;
@@ -341,10 +361,29 @@ section {
     .icons .icon a, .icons .icon a:visited, .icons .icon a:focus, .icons .icon a:active {
       color: #F58233; }
 
+.ion-ios-circle-outline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  color: white;
+  font-size: 5rem; }
+
 /*----------------------*/
 /*--- MEDIA QUERIES ----*/
 /*----------------------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  * {
+    -webkit-tap-highlight-color: transparent; }
+  body {
+    font-size: 1.35rem; }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem 0;
+    padding: 0; }
+  p, span {
+    font-size: 1.35rem;
+    line-height: 1.4; }
+  /**/
   #side-nav {
     display: none;
     height: 102vh; }
@@ -354,8 +393,9 @@ section {
   .col-10 {
     width: 90%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%); }
+    left: 0;
+    margin: 0 auto;
+    float: none; }
   .left, .right {
     width: 100%;
     display: block; }
@@ -379,14 +419,17 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     transform: translate(-50%, -50%) scale(1.5); }
+  #home .left {
+    background-position: 0 0; }
+  #home .left .kite {
+    display: block;
+    right: -10%;
+    top: -30%; }
+  #home .right .kite {
+    display: none; }
   #projects .left img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transform: translate(-50%, -50%) scale(1.5); } }
-
-body .fp-viewing-second #side-nav {
-  background-color: red !important; }
-  body .fp-viewing-second #side-nav ul span {
-    top: 33%; }
